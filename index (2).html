@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lithika Jadav</title>
+<meta name="description" content="Lithika Jadav Malothu — cs & cleantech. Interested in all things energy, especially the grid.">
+<!-- Terminal-style monospace, same family of look as the reference site -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:       #000000;
+    --card:     #0d0d0d;
+    --line:     #262626;
+    --text:     #d4d4d4;
+    --dim:      #8a8a8a;
+    --white:    #f5f5f5;
+    --mono:     "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--mono);
+    font-size:16px;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{ color:var(--white); text-decoration:underline; text-underline-offset:5px; text-decoration-thickness:1px; }
+  a:hover{ color:#fff; }
+  ::selection{ background:#333; color:#fff; }
+
+  .wrap{ max-width:900px; margin:0 auto; padding:0 24px; }
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky; top:0; z-index:10;
+    background:rgba(0,0,0,.9); backdrop-filter:blur(8px);
+    border-bottom:1px solid #111;
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    max-width:1200px; margin:0 auto; padding:26px 32px;
+    gap:16px; flex-wrap:wrap;
+  }
+  .brand{
+    font-weight:700; color:var(--white); font-size:16px;
+    cursor:pointer; text-decoration:none;
+  }
+  nav.tabs{ display:flex; gap:32px; flex-wrap:wrap; }
+  nav.tabs button{
+    background:none; border:none; cursor:pointer;
+    font-family:var(--mono); font-size:15px; color:var(--dim);
+    padding:2px 0;
+  }
+  nav.tabs button:hover{ color:var(--white); }
+  nav.tabs button.active{ color:var(--white); font-weight:700; }
+  nav.tabs button:focus-visible{ outline:1px solid var(--white); outline-offset:4px; }
+
+  /* ---------- pages ---------- */
+  .page{ display:none; padding:110px 0 140px; animation:fade .3s ease; }
+  .page.active{ display:block; }
+  @keyframes fade{ from{opacity:0;} to{opacity:1;} }
+  @media (prefers-reduced-motion: reduce){ .page{ animation:none; } }
+
+  h1{
+    font-family:var(--mono);
+    font-size:clamp(34px,5.5vw,48px);
+    color:var(--white); font-weight:700; letter-spacing:-.01em;
+  }
+  .intro{ font-size:17px; margin-top:34px; max-width:62ch; }
+  .intro a, .intro b{ color:var(--white); font-weight:700; }
+
+  section{ margin-top:80px; }
+  .kicker{
+    color:var(--dim); font-size:15px; letter-spacing:.22em;
+    text-transform:uppercase; margin-bottom:26px;
+  }
+  .plain p{ max-width:68ch; }
+
+  .list{ list-style:none; }
+  .list li{ padding:8px 0; max-width:74ch; }
+  .list b{ color:var(--white); font-weight:700; }
+  .list u{ text-underline-offset:5px; text-decoration-thickness:1px; }
+  .list .dim{ color:var(--dim); }
+
+  /* ---------- cards ---------- */
+  .card{
+    border:1px solid var(--line); background:var(--card);
+    border-radius:4px; padding:34px 38px; margin-top:34px;
+  }
+  .card h3{ color:var(--white); font-size:20px; font-weight:700; margin-bottom:14px; }
+  .card h3 a{ text-decoration:none; }
+  .card h3 a:hover{ text-decoration:underline; }
+  .card p{ max-width:78ch; }
+  .card .meta{ color:var(--dim); font-size:14px; margin-bottom:8px; }
+  .card .repo{ display:inline-block; margin-top:16px; font-size:14px; color:var(--dim); }
+  .card .repo:hover{ color:var(--white); }
+
+  /* ---------- library ---------- */
+  .sub{ color:var(--dim); margin-top:14px; }
+  .lib-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:40px; margin-top:56px;
+    align-items:stretch;
+  }
+  @media (max-width:760px){ .lib-grid{ grid-template-columns:1fr; } }
+  .lib-slot{
+    border:1px solid var(--line); background:var(--card); border-radius:4px;
+    padding:44px 32px 36px; text-align:center;
+  }
+  .tag{
+    display:inline-block; font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+    padding:2px 10px; border:1px solid var(--line); border-radius:3px; color:var(--dim);
+    margin-bottom:34px;
+  }
+  .lib-title{ color:var(--white); font-size:18px; font-weight:700; margin-top:34px; }
+  .lib-by{ color:var(--dim); font-size:14px; margin-top:6px; }
+  .hint{ color:var(--dim); font-size:12px; margin-top:18px; letter-spacing:.06em; }
+
+  /* ----- photo frames (user's own shots) ----- */
+  .photo-scene{ display:flex; justify-content:center; }
+  .photo{
+    border:1px solid var(--line); border-radius:3px; overflow:hidden;
+    background:#0a0a0a; padding:10px;
+    box-shadow:12px 16px 30px rgba(0,0,0,.6);
+    transition:transform .4s ease;
+    max-width:340px;
+  }
+  .photo-scene:hover .photo{ transform:translateY(-6px); }
+  @media (prefers-reduced-motion: reduce){ .photo{ transition:none; } }
+  .photo img{
+    display:block; width:100%; height:auto; border:1px solid #2e2e2e;
+  }
+
+  /* ----- film frame: Seven Years in Tibet ----- */
+  .film-scene{ display:flex; justify-content:center; }
+  .film{
+    width:100%; max-width:360px; padding:14px 12px;
+    background:#0a0a0a; border:1px solid var(--line); border-radius:3px;
+    box-shadow:12px 16px 30px rgba(0,0,0,.6);
+    transition:transform .4s ease;
+  }
+  .film-scene:hover .film{ transform:translateY(-6px) rotate(-1deg); }
+  @media (prefers-reduced-motion: reduce){ .film{ transition:none; } }
+  .film .sprockets{
+    display:flex; justify-content:space-between; padding:0 2px;
+  }
+  .film .sprockets i{
+    width:12px; height:9px; background:#000; border:1px solid #2e2e2e; border-radius:2px;
+  }
+  .film .frame{
+    margin:10px 0; border:1px solid #2e2e2e; overflow:hidden;
+  }
+  .film .frame svg{ display:block; width:100%; height:auto; }
+  .film .caption{
+    text-align:center; font-size:10px; letter-spacing:.26em; color:var(--dim);
+    text-transform:uppercase; padding:4px 0 6px;
+  }
+
+  footer{
+    border-top:1px solid #111; padding:36px 24px; text-align:center;
+    color:var(--dim); font-size:14px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" onclick="go('home')">Lithika Jadav</a>
+    <nav class="tabs" aria-label="Site">
+      <button data-page="home" class="active" onclick="go('home')">Home</button>
+      <button data-page="projects" onclick="go('projects')">Projects</button>
+      <button data-page="library" onclick="go('library')">Library</button>
+      <button data-page="writing" onclick="go('writing')">Writing</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ HOME ============ -->
+  <div class="page active" id="home">
+    <h1>Lithika Jadav</h1>
+
+    <p class="intro">
+      cs &amp; cleantech. Interested in all things <b>energy</b> —
+      especially <b>the grid</b>.
+    </p>
+
+    <section class="plain">
+      <div class="kicker">Why the grid</div>
+      <p>
+        My way in was city planning — trying to understand how cities actually
+        work at scale. Following that thread outward led to the bigger systems
+        underneath: transmission, load, the machinery that keeps the lights on.
+        The grid turned out to be the system I couldn't stop thinking about,
+        and it's the space I'm leaning into.
+      </p>
+    </section>
+
+    <section>
+      <div class="kicker">Currently</div>
+      <ul class="list">
+        <li><b>Studying computer science</b> at Georgia State University — <span class="dim">building toward the intersection of software and clean energy.</span></li>
+        <li><b>Learning the grid</b> — <span class="dim">markets, transmission, and where data and ML can make the system smarter.</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="kicker">Values</div>
+      <ul class="list">
+        <li><b>Zoom out first</b> — <span class="dim">cities, grids, systems: the interesting problems live at the level above the obvious one.</span></li>
+        <li><b>Build to understand</b> — <span class="dim">making something is the fastest way to learn how it really works.</span></li>
+        <li><b>Everything can be learned</b> — <span class="dim">curiosity compounds.</span></li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- ============ PROJECTS ============ -->
+  <div class="page" id="projects">
+    <h1>Projects</h1>
+
+    <div class="card">
+      <div class="meta">Honors 1000</div>
+      <h3><a href="https://github.com/lithikajmalothu-16/HONORS-1000-PROJECT">Predicting Urban Air Quality with ML</a></h3>
+      <p>Built a machine learning model to predict the Air Quality Index across
+      major Indian cities from pollutant data (PM2.5, PM10, NO&#8322;, CO, SO&#8322;),
+      identifying the strongest contributors to pollution to support sustainable
+      city planning. Full workflow from data cleaning to a saved regression
+      model — MAE 31.2, R&sup2; 0.81.</p>
+      <a class="repo" href="https://github.com/lithikajmalothu-16/HONORS-1000-PROJECT">github.com/lithikajmalothu-16/HONORS-1000-PROJECT &rarr;</a>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/lithikajmalothu-16/sunwatch">SunWatch — Solar Fleet Health &amp; Maintenance Prioritizer</a></h3>
+      <p>Solar assets underperform silently — a panel producing 5% less still
+      looks green on the dashboard while revenue leaks. SunWatch ingests
+      inverter-level solar data, computes Performance Ratio against each plant's
+      median to flag genuine underperformers, and ranks them by estimated
+      dollars-per-day lost, turning silent losses into a prioritized maintenance
+      queue. Across 44 inverters on 2 plants, it flagged ~25 underperformers
+      worth ~$459K/year in preventable losses. Python, pandas, Streamlit, NREL
+      PVWatts API — with a live demo.</p>
+      <a class="repo" href="https://github.com/lithikajmalothu-16/sunwatch">github.com/lithikajmalothu-16/sunwatch &rarr;</a>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/lithikajmalothu-16/battery-arbitrage-optimizer">Battery Storage Arbitrage Optimizer</a></h3>
+      <p>How much arbitrage profit can a grid-scale battery actually capture with
+      an imperfect price forecast? This pairs a gradient-boosted price forecaster
+      (day-ahead MAE of $5.01/MWh, 58% better than naive) with a linear-programming
+      optimizer that schedules hourly charge/discharge under real constraints —
+      capacity, power rating, round-trip efficiency, and degradation. Backtested
+      on 72 held-out days: the forecast captures 66.5% of perfect-foresight
+      profit, and modeling battery wear cuts naive returns ~3x while keeping
+      cycling at a realistic ~2.5/day.</p>
+      <a class="repo" href="https://github.com/lithikajmalothu-16/battery-arbitrage-optimizer">github.com/lithikajmalothu-16/battery-arbitrage-optimizer &rarr;</a>
+    </div>
+  </div>
+
+  <!-- ============ LIBRARY ============ -->
+  <div class="page" id="library">
+    <h1>Library</h1>
+    <p class="sub">Books I've read and films I love, shelved together.</p>
+
+    <div class="lib-grid">
+
+      <!-- BOOK: The Immortals of Meluha (trilogy) -->
+      <div class="lib-slot">
+        <span class="tag">Book &middot; Trilogy</span>
+        <div class="photo-scene">
+          <div class="photo">
+            <img src="meluha.jpg" alt="My copies of the Shiva Trilogy: The Immortals of Meluha, The Secret of the Nagas, and The Oath of the Vayuputras" loading="lazy">
+          </div>
+        </div>
+        <div class="lib-title">The Immortals of Meluha</div>
+        <div class="lib-by">Amish Tripathi &middot; Shiva Trilogy, books I&ndash;III</div>
+        <div class="hint">my copies, my shelf</div>
+      </div>
+
+      <!-- FILM: Seven Years in Tibet -->
+      <div class="lib-slot">
+        <span class="tag">Film</span>
+        <div class="film-scene">
+          <div class="film" aria-label="Seven Years in Tibet">
+            <div class="sprockets"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="frame">
+              <img src="seven-years-in-tibet.jpg" alt="A scene from Seven Years in Tibet, photographed from my screen" loading="lazy" style="display:block;width:100%;height:auto;">
+            </div>
+            <div class="sprockets"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="caption">Seven Years in Tibet</div>
+          </div>
+        </div>
+        <div class="lib-title">Seven Years in Tibet</div>
+        <div class="lib-by">Jean-Jacques Annaud &middot; 1997</div>
+        <div class="hint">hover to lift the frame</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============ WRITING ============ -->
+  <div class="page" id="writing">
+    <h1>Writing</h1>
+    <p class="sub">Notes on energy, cities, and the systems in between.
+    <a href="https://medium.com/@lithikajadav">Read on Medium &rarr;</a></p>
+
+    <div class="card">
+      <div class="meta">Aug 2024</div>
+      <h3><a href="https://medium.com/@lithikajadav/textile-turmoil-to-transformative-textiles-a-tale-of-small-business-dc7a76611b80">Textile Turmoil to Transformative Textiles: A Tale of Small Business</a></h3>
+      <p>How I worked alongside a neighbor who runs a local textile business —
+      and what helping a small business up close taught me.</p>
+    </div>
+
+    <div class="card">
+      <div class="meta">Jul 2024</div>
+      <h3><a href="https://medium.com/@lithikajadav/table-of-contents-beebca36398c">Table of Contents: Executive Summary</a></h3>
+      <p>An executive summary that maps out the story — start here.</p>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  Lithika Jadav Malothu &middot; Atlanta &middot;
+  <a href="https://github.com/lithikajmalothu-16">GitHub</a> &middot;
+  <a href="https://www.linkedin.com/in/lithika-jadav-malothu-a890a1211/">LinkedIn</a> &middot;
+  <a href="https://medium.com/@lithikajadav">Medium</a>
+</footer>
+
+<script>
+  function go(id){
+    document.querySelectorAll('.page').forEach(p => p.classList.toggle('active', p.id === id));
+    document.querySelectorAll('nav.tabs button').forEach(b => b.classList.toggle('active', b.dataset.page === id));
+    window.scrollTo({top:0});
+  }
+</script>
+
+</body>
+</html>
