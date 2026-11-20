@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My work · Lithika Jadav Malothu</title>
+<meta name="description" content="Projects by Lithika Jadav Malothu: Pathfinder, CarbonTrace, a battery storage optimizer, cloud cost allocation and air quality prediction.">
+<meta property="og:title" content="My work · Lithika Jadav Malothu">
+<meta property="og:description" content="Projects by Lithika Jadav Malothu: Pathfinder, CarbonTrace, a battery storage optimizer, cloud cost allocation and air quality prediction.">
+<meta property="og:image" content="https://lithikajmalothu-16.github.io/assets/img/lithika.jpg">
+<meta name="theme-color" content="#3F72A8">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="visually-hidden" href="#main">Skip to content</a>
+<div class="charge-bar" aria-hidden="true"></div>
+<header class="site-header">
+<div class="wrap">
+<a class="logo" href="index.html">Lithika</a>
+<nav class="nav" aria-label="Pages">
+<a href="index.html">home</a>
+<a href="work.html" aria-current="page">my work</a>
+<a href="about.html">about + now</a>
+</nav>
+</div>
+</header>
+<main id="main">
+<div class="wrap">
+
+<section class="page-title">
+<div data-enter style="--i:0">
+<h1 class="display">MY WORK</h1>
+<svg class="draw" width="360" height="24" viewBox="0 0 360 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#8EDB9B" stroke-width="4" style="max-width:80vw"><path d="M4 14 Q60 4 120 14 T240 12 T356 10"/></svg>
+</div>
+<span class="note" data-enter style="--i:1;--rot:-6deg">tap a project to open it up
+<svg class="draw" width="80" height="70" viewBox="0 0 120 100" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#FBF3E2" stroke-width="3"><path d="M10 10 Q60 0 70 40 Q76 70 50 64 Q34 58 52 44 Q74 30 104 78"/><path d="M90 74 L105 80 L108 64"/></svg></span>
+</section>
+
+<section class="projects">
+<article class="proj featured open" data-reveal style="--i:0">
+<button type="button" class="proj-head" aria-expanded="true" aria-controls="p-pathfinder">
+<svg class="proj-icon draw" viewBox="0 0 120 76" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#FBF3E2" stroke-width="3"><path d="M60 72 Q30 40 30 26 Q30 6 60 6 Q90 6 90 26 Q90 40 60 72 Z" fill="#8EDB9B"/><circle cx="60" cy="26" r="9"/><path d="M8 66 Q30 56 44 62 M76 62 Q96 54 112 64" stroke-dasharray="4 6"/></svg>
+<span class="proj-title"><span class="badge">newest!</span><span class="name">Pathfinder</span><span class="sub">AI agents + full stack · React, FastAPI, Gemini · HackPerimeter 2026</span></span>
+<span class="plus" aria-hidden="true"></span>
+</button>
+<div class="proj-body" id="p-pathfinder"><div><div class="proj-inner">
+<ul class="pts"><li><b>Problem</b><span>GSU's student support is scattered across dozens of sites, and 65% of students in a Hope Center survey didn't know it existed.</span></li><li><b>What I did</b><span>Built a chat app with Manjunath Ande in 13 hours at HackPerimeter 2026 that turns a student's goal into matching programs, people and events.</span></li><li><b>How I solved it</b><span>Six agents with one job each. Every fact must match a word-for-word quote from gsu.edu, a checker cuts unsupported sentences, and scheduled re-crawls alert students to new matches.</span></li><li><b>What I used</b><span>React, TypeScript, Tailwind, FastAPI, SQLite FTS5, Gemini with Groq failover, Vercel, Render</span></li></ul>
+<div class="stats"><p class="stat"><strong data-count>13 hrs</strong>built, 8 AM to 9 PM</p><p class="stat"><strong data-count>6</strong>agents, one job each</p><p class="stat"><strong data-count>7</strong>GSU campuses covered</p></div>
+<div class="proj-links"><a class="live" href="https://perimeter-hackathon-project.vercel.app">try it live →</a><a class="" href="https://github.com/lithikajmalothu-16/perimeter-hackathon-project">code →</a></div>
+</div></div></div>
+</article>
+<article class="proj featured open" data-reveal style="--i:1">
+<button type="button" class="proj-head" aria-expanded="true" aria-controls="p-carbontrace">
+<svg class="proj-icon draw" viewBox="0 0 120 76" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#FBF3E2" stroke-width="3"><path d="M14 6 H62 L76 20 V70 H14 Z"/><path d="M24 30 H56 M24 42 H50 M24 54 H44"/><circle cx="84" cy="44" r="18" fill="#8EDB9B"/><path d="M97 57 L112 72" stroke-width="5"/><path d="M76 44 L82 50 L93 37" stroke-width="4"/></svg>
+<span class="proj-title"><span class="name">CarbonTrace</span><span class="sub">AI agent + document AI for emissions data · Azure OpenAI, Document Intelligence, FastAPI</span></span>
+<span class="plus" aria-hidden="true"></span>
+</button>
+<div class="proj-body" id="p-carbontrace"><div><div class="proj-inner">
+<ul class="pts"><li><b>Problem</b><span>Companies must report their suppliers' emissions, but that data arrives as messy PDFs and spreadsheets checked by hand, and auditors can't trace numbers back to the source.</span></li><li><b>What I did</b><span>Built an end-to-end review app for a sustainability team: upload, review queue, audit trail and CSV export. Presented it at GSU Robinson's AI Showcase.</span></li><li><b>How I solved it</b><span>Document AI reads each file, Python rules catch unit errors, duplicates and hidden prompt injections, an AI agent investigates anomalies, and a human makes the final call, with every number linked to its source page.</span></li><li><b>What I used</b><span>Azure OpenAI, Azure AI Document Intelligence, Python, FastAPI, SQLite, Azure App Service</span></li></ul>
+<div class="stats"><p class="stat"><strong data-count>8 / 8</strong>test files matched the answer key</p><p class="stat"><strong data-count>1,000x</strong>kWh-as-MWh error caught</p></div>
+<div class="proj-links"><a class="live" href="https://carbontrace-lj-eafvdrhmgagyfhcu.centralus-01.azurewebsites.net/">try it live →</a><a class="" href="https://github.com/lithikajmalothu-16/carbontrace">code →</a></div>
+</div></div></div>
+</article>
+<article class="proj" data-reveal style="--i:0">
+<button type="button" class="proj-head" aria-expanded="false" aria-controls="p-battery-storage-optimizer">
+<svg class="proj-icon draw" viewBox="0 0 120 70" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#FBF3E2" stroke-width="3"><path d="M8 12 Q6 10 10 9 L100 11 Q104 12 103 16 L102 56 Q102 61 97 60 L11 59 Q6 59 7 54 Z"/><path d="M104 26 L113 27 L112 44 L103 43"/><path d="M58 18 L44 38 L58 37 L50 54 L70 30 L56 31 L64 18 Z" fill="#8EDB9B"/></svg>
+<span class="proj-title"><span class="name">Battery Storage Optimizer</span><span class="sub">ML forecasting + optimization · Python, LightGBM, PuLP</span></span>
+<span class="plus" aria-hidden="true"></span>
+</button>
+<div class="proj-body" id="p-battery-storage-optimizer"><div><div class="proj-inner">
+<ul class="pts"><li><b>Problem</b><span>A grid battery only earns money if it charges when power is cheap and sells when it's expensive, but tomorrow's prices are unknown.</span></li><li><b>What I did</b><span>Built a day-ahead price forecast and a dispatch model, backtested over 72 days.</span></li><li><b>How I solved it</b><span>LightGBM forecasts hourly prices, then a linear program turns the forecast into a charge and discharge schedule.</span></li><li><b>What I used</b><span>Python, LightGBM, PuLP, U.S. EIA data</span></li></ul>
+<div class="stats"><p class="stat"><strong data-count>58%</strong>lower forecast error</p><p class="stat"><strong data-count>66.5%</strong>of perfect-foresight profit</p></div>
+<div class="proj-links"><a class="" href="https://github.com/lithikajmalothu-16">code →</a></div>
+</div></div></div>
+</article>
+<article class="proj" data-reveal style="--i:1">
+<button type="button" class="proj-head" aria-expanded="false" aria-controls="p-cloud-cost-allocation">
+<svg class="proj-icon draw" viewBox="0 0 120 70" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#FBF3E2" stroke-width="3"><path d="M24 56 Q6 56 8 40 Q10 26 26 28 Q30 8 52 10 Q70 10 76 26 Q96 20 102 38 Q108 56 88 56 Z"/><path d="M56 30 V48 M50 34 Q56 28 62 34 Q50 40 62 44 Q56 50 50 44"/></svg>
+<span class="proj-title"><span class="name">Cloud Cost Allocation</span><span class="sub">data engineering · Azure, KQL, Python, Excel</span></span>
+<span class="plus" aria-hidden="true"></span>
+</button>
+<div class="proj-body" id="p-cloud-cost-allocation"><div><div class="proj-inner">
+<ul class="pts"><li><b>Problem</b><span>Shared cloud bills hide who spends what, so cost creep and forgotten resources go unnoticed.</span></li><li><b>What I did</b><span>Built an allocation that assigns every dollar of an Azure bill to a team.</span></li><li><b>How I solved it</b><span>KQL queries split the bill, and four automated checks flag waste. I tested them by planting 9 data issues.</span></li><li><b>What I used</b><span>Azure, KQL, Python, Excel</span></li></ul>
+<div class="stats"><p class="stat"><strong data-count>10,579</strong>records allocated</p><p class="stat"><strong data-count>9 / 9</strong>planted issues caught</p></div>
+<div class="proj-links"><a class="" href="https://github.com/lithikajmalothu-16">code →</a></div>
+</div></div></div>
+</article>
+<article class="proj" data-reveal style="--i:0">
+<button type="button" class="proj-head" aria-expanded="false" aria-controls="p-predicting-urban-air-quality">
+<svg class="proj-icon draw" viewBox="0 0 120 70" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#FBF3E2" stroke-width="3"><path d="M6 30 Q30 18 52 30 T100 30"/><path d="M14 44 Q38 32 60 44 T108 44"/><path d="M10 58 Q34 46 56 58 T104 58"/><circle cx="98" cy="12" r="7"/></svg>
+<span class="proj-title"><span class="name">Predicting Urban Air Quality</span><span class="sub">ML regression · Python</span></span>
+<span class="plus" aria-hidden="true"></span>
+</button>
+<div class="proj-body" id="p-predicting-urban-air-quality"><div><div class="proj-inner">
+<ul class="pts"><li><b>Problem</b><span>Predict a city's Air Quality Index from its raw pollutant readings.</span></li><li><b>What I did</b><span>Honors seminar project, Fall 2025: built a regression model across major Indian cities.</span></li><li><b>How I solved it</b><span>Trained on pollutant readings and evaluated on held-out data.</span></li><li><b>What I used</b><span>Python, regression modeling</span></li></ul>
+<div class="stats"><p class="stat"><strong data-count>0.81</strong>R² on held-out data</p><p class="stat"><strong data-count>31.2</strong>AQI-point MAE</p></div>
+<div class="proj-links"><a class="" href="https://github.com/lithikajmalothu-16">code →</a></div>
+</div></div></div>
+</article>
+
+</section>
+
+<section class="card game" data-reveal style="--rot:-.5deg">
+<div class="game-head">
+<h2 class="display">SPOT THE BAD DATA</h2>
+<p>Four suppliers sent their yearly electricity use. One number is wrong. Can you catch it before CarbonTrace does?</p>
+</div>
+<div class="rows" role="group" aria-label="Supplier rows"><button type="button" class="row-btn" aria-pressed="false" data-ok="true" data-why="Nordwind looks fine: a 2% change from last year." style="--rot:-1.5deg"><span>Nordwind GmbH</span><span class="val">1,240 MWh</span><span class="prev">last year: 1,215 MWh</span></button><button type="button" class="row-btn" aria-pressed="false" data-ok="false" data-why="Got it! Atlas reported kWh but labeled them MWh, a 1,000x error. A unit rule flags this before any AI looks at it." style="--rot:1deg"><span>Atlas Metals</span><span class="val">1,180,000 MWh</span><span class="prev">last year: 1,170 MWh</span></button><button type="button" class="row-btn" aria-pressed="false" data-ok="true" data-why="Tricky, but fine: Kessler writes numbers the German way, so this is 1,840.5 MWh." style="--rot:-0.5deg"><span>Kessler AG</span><span class="val">1.840,5 MWh</span><span class="prev">last year: 1.802,0 MWh</span></button><button type="button" class="row-btn" aria-pressed="false" data-ok="true" data-why="A 40% drop looks odd, but GreenLoop installed solar. The agent flags it for a human instead of calling it an error." style="--rot:1.5deg"><span>GreenLoop</span><span class="val">610 MWh</span><span class="prev">last year: 1,020 MWh</span></button></div>
+<p class="verdict swap" id="verdict" aria-live="polite">Tap the row you think is wrong.</p>
+<p class="small">Made-up numbers in the style of CarbonTrace's synthetic test set.</p>
+</section>
+
+<a class="big-link right" href="about.html" data-reveal>
+<span class="display">NEXT: WHAT<br>I'M INTO</span>
+<svg class="draw" style="width:220px" viewBox="0 0 220 60" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#FBF3E2" stroke-width="3"><path d="M6 40 Q40 10 70 34 T130 30 T200 24"/><path d="M186 12 L204 24 L188 38"/></svg>
+</a>
+</div>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<span>Lithika Jadav Malothu · Atlanta, Georgia</span>
+<span>hand-drawn with HTML, CSS and a lot of doodling</span>
+</div>
+</footer>
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>

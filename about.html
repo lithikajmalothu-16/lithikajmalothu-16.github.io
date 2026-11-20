@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About + now · Lithika Jadav Malothu</title>
+<meta name="description" content="What Lithika Jadav Malothu is into: data and ML, AI agents, energy and climate, plus hobbies and what she's up to now.">
+<meta property="og:title" content="About + now · Lithika Jadav Malothu">
+<meta property="og:description" content="What Lithika Jadav Malothu is into: data and ML, AI agents, energy and climate, plus hobbies and what she's up to now.">
+<meta property="og:image" content="https://lithikajmalothu-16.github.io/assets/img/lithika.jpg">
+<meta name="theme-color" content="#3F72A8">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="visually-hidden" href="#main">Skip to content</a>
+<div class="charge-bar" aria-hidden="true"></div>
+<header class="site-header">
+<div class="wrap">
+<a class="logo" href="index.html">Lithika</a>
+<nav class="nav" aria-label="Pages">
+<a href="index.html">home</a>
+<a href="work.html">my work</a>
+<a href="about.html" aria-current="page">about + now</a>
+</nav>
+</div>
+</header>
+<main id="main">
+<div class="wrap">
+
+<section class="page-title" style="padding-bottom:28px">
+<div data-enter style="--i:0">
+<h1 class="display">WHAT I'M INTO</h1>
+<p class="note" style="font-size:24px;margin:10px 0 0">pick one, I'll tell you why ↓</p>
+</div>
+</section>
+
+<section>
+<div class="topics" role="group" aria-label="Topics"><button type="button" class="topic" data-reveal style="--rot:-1.5deg;--i:0" aria-pressed="true" data-text="Data + ML: turning messy data into models people can trust. LightGBM price forecasts, AQI regression, and checks that catch bad numbers before they spread."><svg viewBox="0 0 110 90" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="currentColor" stroke-width="3"><path d="M8 82 H102 M8 82 V8"/><circle cx="24" cy="60" r="4"/><circle cx="38" cy="50" r="4"/><circle cx="52" cy="54" r="4"/><circle cx="66" cy="34" r="4"/><circle cx="82" cy="28" r="4"/><path d="M16 66 Q50 50 96 18" stroke-dasharray="6 6"/></svg>DATA + ML</button><button type="button" class="topic" data-reveal style="--rot:1deg;--i:1" aria-pressed="false" data-text="AI agents: agents that show their work. Pathfinder only answers with word-for-word quotes from gsu.edu, and in CarbonTrace the code does the math while the agent explains."><svg viewBox="0 0 110 90" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="currentColor" stroke-width="3"><path d="M10 12 H100 V62 H52 L32 80 V62 H10 Z"/><path d="M38 38 L50 50 L74 24" stroke-width="4"/></svg>AI AGENTS</button><button type="button" class="topic" data-reveal style="--rot:-0.5deg;--i:2" aria-pressed="false" data-text="Energy + climate: the domain I keep pointing my tools at, from battery storage prices to supplier emissions data to urban energy research with CASA."><svg viewBox="0 0 110 90" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="currentColor" stroke-width="3"><path d="M60 6 L30 50 H54 L44 84 L82 34 H58 L70 6 Z"/></svg>ENERGY + CLIMATE</button></div>
+<div class="card topic-text swap" id="topic-text" data-reveal style="--rot:.4deg" aria-live="polite">Data + ML: turning messy data into models people can trust. LightGBM price forecasts, AQI regression, and checks that catch bad numbers before they spread.</div>
+</section>
+
+<section class="pad-top">
+<div class="section-head" data-reveal>
+<h2 class="display">HOW I<br>BUILD THINGS</h2>
+<span class="note">tap each step →</span>
+</div>
+<div class="pipeline"><div class="step-wrap" data-reveal="pop" style="--i:0"><button type="button" class="step" style="--rot:-3deg" aria-pressed="false" data-title="Step 1: get the data" data-text="EIA price feeds, Azure billing exports, supplier PDFs, gsu.edu pages. Most of the work starts with finding the right source."><small>step 1</small>GET DATA</button><svg class="draw" width="52" height="30" viewBox="0 0 60 30" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#FBF3E2" stroke-width="3"><path d="M4 16 Q18 4 30 16 T52 14"/><path d="M44 6 L54 14 L44 22"/></svg></div><div class="step-wrap" data-reveal="pop" style="--i:1"><button type="button" class="step" style="--rot:2deg" aria-pressed="false" data-title="Step 2: clean it" data-text="Units, formats, duplicates, missing values. CarbonTrace even handles German number formats like 1.840,5."><small>step 2</small>CLEAN IT</button><svg class="draw" width="52" height="30" viewBox="0 0 60 30" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#FBF3E2" stroke-width="3"><path d="M4 16 Q18 4 30 16 T52 14"/><path d="M44 6 L54 14 L44 22"/></svg></div><div class="step-wrap" data-reveal="pop" style="--i:2"><button type="button" class="step" style="--rot:-1deg" aria-pressed="false" data-title="Step 3: model it" data-text="LightGBM for price forecasts, regression for air quality, LLM agents when the task needs judgment."><small>step 3</small>MODEL IT</button><svg class="draw" width="52" height="30" viewBox="0 0 60 30" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#FBF3E2" stroke-width="3"><path d="M4 16 Q18 4 30 16 T52 14"/><path d="M44 6 L54 14 L44 22"/></svg></div><div class="step-wrap" data-reveal="pop" style="--i:3"><button type="button" class="step" style="--rot:3deg" aria-pressed="true" data-title="Step 4: check it (my favorite part)" data-text="Backtests, held-out data, and rules that verify every fact. Pathfinder throws out any card it cannot quote word for word."><small>step 4</small>CHECK IT</button><svg class="draw" width="52" height="30" viewBox="0 0 60 30" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#FBF3E2" stroke-width="3"><path d="M4 16 Q18 4 30 16 T52 14"/><path d="M44 6 L54 14 L44 22"/></svg></div><div class="step-wrap" data-reveal="pop" style="--i:4"><button type="button" class="step" style="--rot:-2deg" aria-pressed="false" data-title="Step 5: ship it" data-text="A live app someone can actually use: Vercel and Render for Pathfinder, Azure App Service for CarbonTrace."><small>step 5</small>SHIP IT</button></div></div>
+<div class="step-detail" data-reveal aria-live="polite">
+<p class="display swap" id="step-title">Step 4: check it (my favorite part)</p>
+<p class="swap" id="step-text">Backtests, held-out data, and rules that verify every fact. Pathfinder throws out any card it cannot quote word for word.</p>
+</div>
+</section>
+
+<section id="hobbies" class="pad-top">
+<div class="section-head" data-reveal>
+<h2 class="display">HOBBIES</h2>
+<span class="note">when the laptop is closed ↓</span>
+</div>
+<div class="hobbies"><article class="hobby bg-sun" data-reveal style="--rot:-1.5deg;--i:0"><svg class="draw" width="96" height="80" viewBox="0 0 96 80" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#2B4F78" stroke-width="3"><path d="M14 36 H82 V58 Q82 72 66 72 H30 Q14 72 14 58 Z"/><path d="M4 40 H14 M82 40 H92"/><path d="M36 26 Q30 18 36 10 M48 26 Q42 16 48 6 M60 26 Q54 18 60 10"/></svg><h3>COOKING SOUTH INDIAN FOOD</h3><p>Recreating the South Indian recipes I grew up with, one experiment at a time.</p></article><article class="hobby bg-mint" data-reveal style="--rot:1deg;--i:1"><svg class="draw" width="96" height="80" viewBox="0 0 96 80" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#2B4F78" stroke-width="3"><circle cx="40" cy="40" r="30"/><path d="M10 40 H70 M40 10 Q24 40 40 70 M40 10 Q56 40 40 70"/><path d="M74 20 L90 12 V34 L74 26 Z"/></svg><h3>TRAVEL DOCUMENTARIES</h3><p>Seeing the world one documentary at a time, and adding places to my list.</p></article><article class="hobby bg-cream" data-reveal style="--rot:-0.8deg;--i:2"><svg class="draw" width="96" height="80" viewBox="0 0 96 80" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#2B4F78" stroke-width="3"><path d="M6 30 L48 12 L90 30 L48 48 Z"/><path d="M24 38 V56 Q48 70 72 56 V38"/><path d="M90 30 V52"/><circle cx="90" cy="56" r="3"/></svg><h3>ADVISING HIGH SCHOOLERS</h3><p>Helping high school students choose co-curriculars that strengthen their college applications.</p></article></div>
+</section>
+
+<section class="pad-top now">
+<div class="now-head" data-reveal>
+<h2 class="display">RIGHT<br>NOW</h2>
+<p>outside of class and work. go ahead, tick things off.</p>
+<span class="count"><span id="done-count">0</span> of 4 done</span>
+</div>
+<ul class="todos"><li data-reveal style="--i:0"><button type="button" class="todo bg-sun" aria-pressed="false" style="--rot:-2deg"><span class="box"><svg viewBox="0 0 22 22" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#2E7D4F" stroke-width="3.5"><path pathLength="1" d="M3 11 L9 17 L20 3"/></svg></span><span class="todo-text">Actually make plans with friends to go ice skating</span></button></li><li data-reveal style="--i:1"><button type="button" class="todo bg-mint" aria-pressed="false" style="--rot:1.5deg"><span class="box"><svg viewBox="0 0 22 22" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#2E7D4F" stroke-width="3.5"><path pathLength="1" d="M3 11 L9 17 L20 3"/></svg></span><span class="todo-text">Write the next part of my grid series on Medium</span></button></li><li data-reveal style="--i:2"><button type="button" class="todo bg-cream" aria-pressed="false" style="--rot:-1deg"><span class="box"><svg viewBox="0 0 22 22" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#2E7D4F" stroke-width="3.5"><path pathLength="1" d="M3 11 L9 17 L20 3"/></svg></span><span class="todo-text">Go deeper on energy markets and sustainability projects</span></button></li><li data-reveal style="--i:3"><button type="button" class="todo bg-sun" aria-pressed="false" style="--rot:2deg"><span class="box"><svg viewBox="0 0 22 22" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#2E7D4F" stroke-width="3.5"><path pathLength="1" d="M3 11 L9 17 L20 3"/></svg></span><span class="todo-text">Show up to run club</span></button></li></ul>
+</section>
+
+<div class="pad-top"></div>
+
+<section class="card contact" data-reveal style="--rot:.5deg">
+<div>
+<h2 class="display">CONTACT ME</h2>
+<a class="mail" href="mailto:lithikajadav16@gmail.com">lithikajadav16@gmail.com</a>
+<div class="links">
+<a href="https://www.linkedin.com/in/lithika-jadav-malothu-a890a1211">LinkedIn</a>
+<a href="https://github.com/lithikajmalothu-16">GitHub</a>
+<a href="https://medium.com/@lithikajadav">Medium</a>
+</div>
+</div>
+<svg class="draw" width="170" height="120" viewBox="0 0 200 140" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#2B4F78" stroke-width="4"><path d="M14 22 L186 18 L182 124 L18 126 Z"/><path d="M16 24 L100 82 L184 20"/></svg>
+</section>
+</div>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<span>Lithika Jadav Malothu · Atlanta, Georgia</span>
+<span>hand-drawn with HTML, CSS and a lot of doodling</span>
+</div>
+</footer>
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>
